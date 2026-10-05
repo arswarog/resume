@@ -27,7 +27,7 @@ yarn install
 Start the Vite development server:
 
 ```bash
-yarn dev
+yarn start
 ```
 
 Open the URL printed by Vite, usually <http://localhost:5173/>.

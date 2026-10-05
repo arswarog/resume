@@ -123,7 +123,7 @@ A shared URL module constructs public asset URLs and local SPA URLs from `import
 - Delete: `src/app/`
 
 - [x] Add Vite production configuration with the React plugin, `@` → `src` alias, and `loadEnv(mode, process.cwd(), "VITE_")`; normalize `VITE_BASE_PATH` to `/` by default or a deployment prefix such as `/resume/`.
-- [x] Replace package scripts with Yarn/Vite commands (`dev`, `build`, `preview`), add `typecheck` and React ESLint commands, remove `next`/`eslint-config-next`, and update TypeScript/ESLint configuration for Vite and React.
+- [x] Replace package scripts with Yarn/Vite commands (`start`, `build`, `preview`), add `typecheck` and React ESLint commands, remove `next`/`eslint-config-next`, and update TypeScript/ESLint configuration for Vite and React.
 - [x] Create `index.html`, `src/main.tsx`, `src/App.tsx`, `src/index.css`, and `public/favicon.ico`; migrate title, description, favicon, global Tailwind/theme styles, system font stack, and the current one-page section order.
 - [x] Move all home/layout/divider components to `src/components`, update imports, replace every `next/image` with native `<img src={assetUrl(...)}`, and replace every `next/link` with native `<a>`.
 - [x] Convert `/` template links to `appUrl("/")`, preserve fragment (`#`) links, and preserve existing external destinations; remove API fetches, `useEffect`, `useState`, `any` data values, and unnecessary `"use client"` directives from static-data sections.
@@ -140,7 +140,7 @@ A shared URL module constructs public asset URLs and local SPA URLs from `import
 - Modify: `docs/plans/20261004-migrate-resume-to-vite-spa.md`
 
 - [x] Add `.env.example` documenting `VITE_BASE_PATH=/` and the `/resume/` subdirectory example.
-- [x] Update README installation, development, preview, build, and deployment instructions for Yarn/Vite; remove Next.js, npm/pnpm, and Vercel-specific instructions.
+- [x] Update README installation, development, preview, build, and deployment instructions for Yarn/Vite; remove Next.js, npm, and Vercel-specific instructions.
 - [x] Document `VITE_BASE_PATH` as a build-time deployment prefix and include `VITE_BASE_PATH=/resume/ yarn build`.
 - [x] Build with the default base and verify `dist/` contains no `next/` or `/api/*` references.
 - [x] Build with `VITE_BASE_PATH=/resume/` and inspect/preview output to confirm entry files, images, icons, favicon, and generated local SPA links use `/resume/` exactly once.
