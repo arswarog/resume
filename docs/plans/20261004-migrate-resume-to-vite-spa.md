@@ -68,12 +68,12 @@ A shared URL module constructs public asset URLs and local SPA URLs from `import
 - Modify: `package.json`
 - Modify: `.gitignore`
 
-- [ ] Use Corepack to select the installed Yarn release, set its exact `packageManager` value in `package.json`, run `yarn install`, and commit the generated `yarn.lock`.
-- [ ] Add Vitest, jsdom, React Testing Library, and related test dependencies plus a `yarn test` script; retain `next`, existing Next scripts, and current Next TypeScript/ESLint settings in this task.
-- [ ] Create `vitest.config.ts` and `src/test/setup.ts` for jsdom and React Testing Library cleanup without changing production build configuration.
-- [ ] Add `src/lib/utils.test.ts` covering `cn` class merging and optional/falsy inputs.
-- [ ] Update `.gitignore` only for test artefacts produced by the selected tooling; do not remove Next entries yet.
-- [ ] Run `yarn test`; the new test suite must pass before Task 2.
+- [x] Use Corepack to select the installed Yarn release, set its exact `packageManager` value in `package.json`, run `yarn install`, and commit the generated `yarn.lock`.
+- [x] Add Vitest, jsdom, React Testing Library, and related test dependencies plus a `yarn test` script; retain `next`, existing Next scripts, and current Next TypeScript/ESLint settings in this task.
+- [x] Create `vitest.config.ts` and `src/test/setup.ts` for jsdom and React Testing Library cleanup without changing production build configuration.
+- [x] Add `src/lib/utils.test.ts` covering `cn` class merging and optional/falsy inputs.
+- [x] Update `.gitignore` only for test artefacts produced by the selected tooling; do not remove Next entries yet.
+- [x] Run `yarn test`; the new test suite must pass before Task 2.
 
 ### Task 2: Add typed portfolio data and base-path URL utilities
 
