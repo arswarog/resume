@@ -122,14 +122,14 @@ A shared URL module constructs public asset URLs and local SPA URLs from `import
 - Delete: `next.config.ts`
 - Delete: `src/app/`
 
-- [ ] Add Vite production configuration with the React plugin, `@` → `src` alias, and `loadEnv(mode, process.cwd(), "VITE_")`; normalize `VITE_BASE_PATH` to `/` by default or a deployment prefix such as `/resume/`.
-- [ ] Replace package scripts with Yarn/Vite commands (`dev`, `build`, `preview`), add `typecheck` and React ESLint commands, remove `next`/`eslint-config-next`, and update TypeScript/ESLint configuration for Vite and React.
-- [ ] Create `index.html`, `src/main.tsx`, `src/App.tsx`, `src/index.css`, and `public/favicon.ico`; migrate title, description, favicon, global Tailwind/theme styles, system font stack, and the current one-page section order.
-- [ ] Move all home/layout/divider components to `src/components`, update imports, replace every `next/image` with native `<img src={assetUrl(...)}`, and replace every `next/link` with native `<a>`.
-- [ ] Convert `/` template links to `appUrl("/")`, preserve fragment (`#`) links, and preserve existing external destinations; remove API fetches, `useEffect`, `useState`, `any` data values, and unnecessary `"use client"` directives from static-data sections.
-- [ ] Delete the App Router, both API route handlers, App Router favicon, and `next.config.ts` only after their Vite replacements and moved components exist.
-- [ ] Write React Testing Library tests for the four static-data sections and `App`: verify representative content, synchronous rendering without `fetch`, expected raw `img` `src` attributes, base-aware local hrefs, header, and footer.
-- [ ] Run `yarn test`, `yarn lint`, `yarn typecheck`, and `yarn build`; all must pass before Task 4.
+- [x] Add Vite production configuration with the React plugin, `@` → `src` alias, and `loadEnv(mode, process.cwd(), "VITE_")`; normalize `VITE_BASE_PATH` to `/` by default or a deployment prefix such as `/resume/`.
+- [x] Replace package scripts with Yarn/Vite commands (`dev`, `build`, `preview`), add `typecheck` and React ESLint commands, remove `next`/`eslint-config-next`, and update TypeScript/ESLint configuration for Vite and React.
+- [x] Create `index.html`, `src/main.tsx`, `src/App.tsx`, `src/index.css`, and `public/favicon.ico`; migrate title, description, favicon, global Tailwind/theme styles, system font stack, and the current one-page section order.
+- [x] Move all home/layout/divider components to `src/components`, update imports, replace every `next/image` with native `<img src={assetUrl(...)}`, and replace every `next/link` with native `<a>`.
+- [x] Convert `/` template links to `appUrl("/")`, preserve fragment (`#`) links, and preserve existing external destinations; remove API fetches, `useEffect`, `useState`, `any` data values, and unnecessary `"use client"` directives from static-data sections.
+- [x] Delete the App Router, both API route handlers, App Router favicon, and `next.config.ts` only after their Vite replacements and moved components exist.
+- [x] Write React Testing Library tests for the four static-data sections and `App`: verify representative content, synchronous rendering without `fetch`, expected raw `img` `src` attributes, base-aware local hrefs, header, and footer.
+- [x] Run `yarn test`, `yarn lint`, `yarn typecheck`, and `yarn build`; all must pass before Task 4.
 
 ### Task 4: Document deployment and validate both base-path builds
 
