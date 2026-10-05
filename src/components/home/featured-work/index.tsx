@@ -22,6 +22,7 @@ const FeaturedWork = () => (
                 </a>
                 <div className="flex flex-col gap-1 sm:gap-2 px-2">
                   <a href={appUrl("/")}><h4>{value.title}</h4></a>
+                  <p>{value.description}</p>
                   <div className="flex"><p>{value.roles.join(", ")}</p></div>
                 </div>
               </div>

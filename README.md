@@ -12,7 +12,7 @@ Typefolio is a clean, responsive one-page portfolio built with React, TypeScript
 
 ## Requirements
 
-- Node.js 20 or newer
+- Node.js `^20.19.0 || >=22.12.0` (20.19.0 or newer on the 20.x line, or 22.12.0 or newer)
 - Corepack-enabled Yarn
 
 The repository pins the Yarn release in `package.json`. Enable Corepack once on a new machine, then use Yarn for every project command:

@@ -1,5 +1,5 @@
-import { projectOverview } from "@/data/portfolio"
-import { appUrl, assetUrl } from "@/lib/urls"
+import { type Project, projectOverview } from "@/data/portfolio"
+import { assetUrl } from "@/lib/urls"
 
 const ProjectOverview = () => (
   <section>
@@ -20,8 +20,8 @@ const ProjectOverview = () => (
           <div className="flex flex-col xs:flex-row items-start gap-5 xs:gap-10 md:gap-28 lg:gap-5">
             <p className="max-w-fit lg:max-w-2xs w-full text-sm tracking-[2px] text-primary uppercase font-medium">Side Projects</p>
             <div className="flex flex-col gap-2.5">
-              {projectOverview.sideProjects.map((value) => {
-                const isComingSoon = "comingSoon" in value && value.comingSoon === true
+              {projectOverview.sideProjects.map((value: Project) => {
+                const isComingSoon = value.comingSoon === true
                 const content = (
                   <div className="group flex flex-wrap items-center gap-2">
                     <h4 className={isComingSoon ? "text-muted-foreground" : "text-primary"}>{value.name}</h4>
@@ -32,7 +32,7 @@ const ProjectOverview = () => (
                     )}
                   </div>
                 )
-                return isComingSoon ? <div key={value.name}>{content}</div> : <a key={value.name} href={appUrl("/")} className="group">{content}</a>
+                return isComingSoon ? <div key={value.name}>{content}</div> : <a key={value.name} href={value.url} className="group">{content}</a>
               })}
             </div>
           </div>
