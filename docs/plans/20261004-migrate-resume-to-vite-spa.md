@@ -151,11 +151,18 @@ A shared URL module constructs public asset URLs and local SPA URLs from `import
 **Files:**
 - Modify: `docs/plans/20261004-migrate-resume-to-vite-spa.md`
 
-- [ ] Verify the repository has no `next` dependency, Next scripts/configuration/plugins, `next/*` imports, router dependency, or `src/app/api` handlers.
-- [ ] Verify all former API content exists in `src/data/portfolio.ts`, static sections contain no network fetching, and App renders the existing header, footer, section order, copy, layout classes, and public assets.
-- [ ] Verify the root and `/resume/` builds both include title, description, favicon, and correctly prefixed asset/local SPA URLs.
-- [ ] No source behavior is introduced in this verification-only task; no test file update is required. Run and record the full suite: `yarn test`, `yarn lint`, `yarn typecheck`, and `yarn build`.
-- [ ] Mark every verified acceptance criterion and every completed Task 1–4 checklist item before Task 6.
+- [x] Verify the repository has no `next` dependency, Next scripts/configuration/plugins, `next/*` imports, router dependency, or `src/app/api` handlers.
+- [x] Verify all former API content exists in `src/data/portfolio.ts`, static sections contain no network fetching, and App renders the existing header, footer, section order, copy, layout classes, and public assets.
+- [x] Verify the root and `/resume/` builds both include title, description, favicon, and correctly prefixed asset/local SPA URLs.
+- [x] No source behavior is introduced in this verification-only task; no test file update is required. Run and record the full suite: `yarn test`, `yarn lint`, `yarn typecheck`, and `yarn build`.
+- [x] Mark every verified acceptance criterion and every completed Task 1–4 checklist item before Task 6.
+
+**Task 5 verification record:**
+- `yarn test`: passed (5 test files, 15 tests).
+- `yarn lint`: passed.
+- `yarn typecheck`: passed.
+- `yarn build`: passed for the default `/` base and `VITE_BASE_PATH=/resume/ yarn build`: passed for the `/resume/` base; both outputs contain metadata, favicon, copied public assets, and correctly prefixed URLs with no Next.js or `/api/` references.
+- Source and repository scans passed for removal of Next/router/API/networking references, complete static portfolio data, preserved App order/content/layout/assets, and a clean non-plan working tree.
 
 ### Task 6: Finalize documentation and plan tracking
 
