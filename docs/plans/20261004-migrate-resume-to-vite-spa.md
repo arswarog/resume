@@ -171,11 +171,17 @@ A shared URL module constructs public asset URLs and local SPA URLs from `import
 - Modify: `docs/plans/20261004-migrate-resume-to-vite-spa.md`
 - Move: `docs/plans/20261004-migrate-resume-to-vite-spa.md` → `docs/plans/completed/20261004-migrate-resume-to-vite-spa.md`
 
-- [ ] Reconcile README and `.env.example` with the tested Yarn commands and exact Vite base-path behavior.
-- [ ] Record discovered deviations, follow-up work, and resolved blockers in the plan before closure.
-- [ ] No source behavior is introduced in this documentation-only task; no test file update is required. Run final `yarn test`, `yarn lint`, `yarn typecheck`, and `yarn build` checks successfully.
-- [ ] Confirm every implementation and verification checkbox is marked `[x]`; do not close the plan with unresolved required items.
-- [ ] Create `docs/plans/completed/` if needed and move the completed plan there.
+- [x] Reconcile README and `.env.example` with the tested Yarn commands and exact Vite base-path behavior.
+- [x] Record discovered deviations, follow-up work, and resolved blockers in the plan before closure.
+- [x] No source behavior is introduced in this documentation-only task; no test file update is required. Run final `yarn test`, `yarn lint`, `yarn typecheck`, and `yarn build` checks successfully.
+- [x] Confirm every implementation and verification checkbox is marked `[x]`; do not close the plan with unresolved required items.
+- [x] Create `docs/plans/completed/` if needed and move the completed plan there (deferred to harness terminal move).
+
+**Task 6 finalization record:**
+- README now lists the tested Yarn check sequence, including `yarn build`, and documents that `VITE_BASE_PATH` is a Vite build-time prefix normalized to `/` or a single leading/trailing-slash deployment prefix.
+- `.env.example` now pairs the root value with `yarn build` and the `/resume/` value with the exact `VITE_BASE_PATH=/resume/ yarn build` command.
+- Final root and `/resume/` builds, tests, lint, and typechecking passed; no source or test files changed in Task 6.
+- Deviation: the plan remains at its original path until the parent harness performs the terminal move; this is the only deferred closure action. Follow-up is limited to the manual browser and target-server checks listed in Post-Completion. No blockers remain.
 
 ## Post-Completion
 

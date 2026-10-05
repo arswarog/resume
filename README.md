@@ -34,12 +34,13 @@ Open the URL printed by Vite, usually <http://localhost:5173/>.
 
 ## Checks
 
-Run the automated checks before publishing a build:
+Run the automated checks before publishing a build. These are the repository's tested Yarn scripts:
 
 ```bash
 yarn test
 yarn lint
 yarn typecheck
+yarn build
 ```
 
 ## Production build
@@ -58,7 +59,7 @@ yarn preview
 
 ## Base-path deployments
 
-`VITE_BASE_PATH` is a build-time deployment prefix. It must include the public subdirectory when the site is served below the domain root. The value is normalized to one leading and trailing slash, so `/resume`, `/resume/`, and `///resume///` produce the same `/resume/` prefix.
+`VITE_BASE_PATH` is a Vite build-time deployment prefix. It must include the public subdirectory when the site is served below the domain root. Vite and the application's URL helpers normalize the value to one leading and trailing slash, so `/resume`, `/resume/`, and `///resume///` produce the same `/resume/` prefix; `/` produces `/`.
 
 For a site served at `https://example.com/resume/`, run the exact build command:
 
