@@ -85,12 +85,12 @@ A shared URL module constructs public asset URLs and local SPA URLs from `import
 - Read: `src/app/api/page-data/route.ts`
 - Read: `src/app/api/featured-work/route.ts`
 
-- [ ] Define TypeScript types and immutable `experienceData`, `educationData`, `featuredWork`, and `projectOverview` exports, preserving all content from the two current API handlers.
-- [ ] Implement `assetUrl` and `appUrl` in `src/lib/urls.ts`; default each helper to `import.meta.env.BASE_URL` and permit an explicit base argument for deterministic tests.
-- [ ] Normalize leading/trailing slashes so `/`, `/resume`, and `/resume/` produce correct URLs without duplicate separators.
-- [ ] Write static-data tests for expected records, required fields, project URLs, and both `comingSoon` states.
-- [ ] Write URL-helper tests for root builds, subdirectory builds, leading-slash paths, empty/root local paths, and separator edge cases.
-- [ ] Run `yarn test`; all new tests must pass before Task 3.
+- [x] Define TypeScript types and immutable `experienceData`, `educationData`, `featuredWork`, and `projectOverview` exports, preserving all content from the two current API handlers.
+- [x] Implement `assetUrl` and `appUrl` in `src/lib/urls.ts`; default each helper to `import.meta.env.BASE_URL` and permit an explicit base argument for deterministic tests.
+- [x] Normalize leading/trailing slashes so `/`, `/resume`, and `/resume/` produce correct URLs without duplicate separators.
+- [x] Write static-data tests for expected records, required fields, project URLs, and both `comingSoon` states.
+- [x] Write URL-helper tests for root builds, subdirectory builds, leading-slash paths, empty/root local paths, and separator edge cases.
+- [x] Run `yarn test`; all new tests must pass before Task 3.
 
 ### Task 3: Atomically migrate the application shell and remove Next.js
 
