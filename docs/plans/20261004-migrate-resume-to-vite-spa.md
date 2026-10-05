@@ -136,14 +136,15 @@ A shared URL module constructs public asset URLs and local SPA URLs from `import
 **Files:**
 - Create: `.env.example`
 - Modify: `README.md`
+- Modify: `index.html` (remove stale framework metadata found during output inspection)
 - Modify: `docs/plans/20261004-migrate-resume-to-vite-spa.md`
 
-- [ ] Add `.env.example` documenting `VITE_BASE_PATH=/` and the `/resume/` subdirectory example.
-- [ ] Update README installation, development, preview, build, and deployment instructions for Yarn/Vite; remove Next.js, npm/pnpm, and Vercel-specific instructions.
-- [ ] Document `VITE_BASE_PATH` as a build-time deployment prefix and include `VITE_BASE_PATH=/resume/ yarn build`.
-- [ ] Build with the default base and verify `dist/` contains no `next/` or `/api/*` references.
-- [ ] Build with `VITE_BASE_PATH=/resume/` and inspect/preview output to confirm entry files, images, icons, favicon, and generated local SPA links use `/resume/` exactly once.
-- [ ] Update URL-helper or component tests if either build exposes an uncovered base-path case, then run `yarn test`, `yarn lint`, `yarn typecheck`, and `yarn build` successfully before Task 5.
+- [x] Add `.env.example` documenting `VITE_BASE_PATH=/` and the `/resume/` subdirectory example.
+- [x] Update README installation, development, preview, build, and deployment instructions for Yarn/Vite; remove Next.js, npm/pnpm, and Vercel-specific instructions.
+- [x] Document `VITE_BASE_PATH` as a build-time deployment prefix and include `VITE_BASE_PATH=/resume/ yarn build`.
+- [x] Build with the default base and verify `dist/` contains no `next/` or `/api/*` references.
+- [x] Build with `VITE_BASE_PATH=/resume/` and inspect/preview output to confirm entry files, images, icons, favicon, and generated local SPA links use `/resume/` exactly once.
+- [x] Update URL-helper or component tests if either build exposes an uncovered base-path case, then run `yarn test`, `yarn lint`, `yarn typecheck`, and `yarn build` successfully before Task 5.
 
 ### Task 5: Verify migration acceptance criteria
 

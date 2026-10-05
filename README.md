@@ -1,131 +1,99 @@
+# Typefolio
 
-# ✨ Typefolio - Shadcn UI Personal Portfolio Template
+Typefolio is a clean, responsive one-page portfolio built with React, TypeScript, Vite, Tailwind CSS, and shadcn/ui. The application is a static single-page site: the production build can be served by any static web server without a Node.js runtime.
 
-**Typefolio** is a **clean, minimal, and production-ready portfolio template** built with **Next.js, Tailwind CSS, and shadcn/ui**.
+## Features
 
-It’s designed for **developers, designers, and creatives** who want a fast, elegant, and modern one-page website to showcase their **work, skills, and professional profile** with clarity and style.
+- One-page portfolio layout with hero, about, education, experience, featured work, and project sections
+- Responsive styling with Tailwind CSS
+- Reusable shadcn/ui components
+- Typed local portfolio data with no runtime API requests
+- Base-path-aware assets and local links for root and subdirectory deployments
 
-If you’re looking for a **modern Next.js portfolio or resume template** with excellent performance and a polished UI, Typefolio is a great starting point.
+## Requirements
 
+- Node.js 20 or newer
+- Corepack-enabled Yarn
 
----
-
-## ✨ Key Features
-
-- 🧭 One-page layout designed for personal portfolio showcases  
-- ⚡ Built with **Next.js** for smooth navigation and high performance  
-- 🎨 Styled using **Tailwind CSS** for utility-first design flexibility  
-- 🧩 Includes reusable **shadcn/ui** components  
-- 🚀 Lightning-fast loading with a minimal bundle size  
-- 📱 Fully responsive across all devices and viewports  
-- 🧱 Clean, well-organized codebase for easy editing and customization  
-- 🪶 Lightweight architecture with minimal dependencies  
-- 👤 Ideal for personal branding, portfolios, and digital CV websites
-
-----------
-
-## 🚀 Getting Started
-
-### 1️⃣ Clone the Repository
+The repository pins the Yarn release in `package.json`. Enable Corepack once on a new machine, then use Yarn for every project command:
 
 ```bash
-git clone https://github.com/shadcnspace/typefolio-shadcn-ui-personal-portfolio-template.git
-
-```
-
-### 2️⃣ Install Dependencies
-
-```bash
-npm install
-# or
-pnpm install
-# or
+corepack enable
 yarn install
-
 ```
 
-### 3️⃣ Run the Development Server
+## Development
+
+Start the Vite development server:
 
 ```bash
-npm run dev
-# or
-pnpm dev
-# or
 yarn dev
-
 ```
 
-Open **[http://localhost:3000](http://localhost:3000/)** in your browser to see the result.
+Open the URL printed by Vite, usually <http://localhost:5173/>.
 
-----------
+## Checks
 
-## ⚡ One‑Click Deployment
+Run the automated checks before publishing a build:
 
-Deploy your website on vercel in seconds using the button below:
+```bash
+yarn test
+yarn lint
+yarn typecheck
+```
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/shadcnspace/typefolio-shadcn-ui-personal-portfolio-template)
+## Production build
 
-----------
+Build the site for a domain-root deployment. The compiled files are written to `dist/`:
 
-## 📄 License
+```bash
+yarn build
+```
 
-Crypgo is **100% free and open‑source**.  
-You are free to use it for **personal and commercial projects**.
+Preview the current `dist/` output locally:
 
-----------
+```bash
+yarn preview
+```
 
-## 💜 Support & Community
+## Base-path deployments
 
-If you find this template useful:
+`VITE_BASE_PATH` is a build-time deployment prefix. It must include the public subdirectory when the site is served below the domain root. The value is normalized to one leading and trailing slash, so `/resume`, `/resume/`, and `///resume///` produce the same `/resume/` prefix.
 
--   ⭐ Star the repository
-    
--   🐛 Report issues
-    
--   🔧 Suggest improvements
-    
+For a site served at `https://example.com/resume/`, run the exact build command:
 
-Your support helps improve and maintain the project.
+```bash
+VITE_BASE_PATH=/resume/ yarn build
+```
 
-----------
-<p align="center">
-  <a href="https://shadcnspace.com" target="_blank">
-    <img src="https://images.shadcnspace.com/assets/logo/shadcnspace-favicon.png" alt="shadcnspace logo" width="48" />
-  </a>
-</p>
+This prefixes the generated entry files, assets, icons, favicon, and local application links with `/resume/`. For a root deployment, omit the variable or use `VITE_BASE_PATH=/`:
 
-<h1 align="center">shadcn/space</h1>
+```bash
+yarn build
+# or
+VITE_BASE_PATH=/ yarn build
+```
 
-<p align="center">
-  Production-ready <b>shadcn/ui blocks, components, and templates</b> for modern
-  <b>React and Next.js</b> applications — built with Tailwind CSS and designed to
-  be copied, customized, and shipped. 🚀
-</p>
+The repository includes [`.env.example`](.env.example) with both supported examples. Environment values are read during the build and are not changed by `yarn preview` or by the static web server.
 
-<p align="center">
-  <a href="https://shadcnspace.com"><strong>Website</strong></a> ·
-  <a href="https://shadcnspace.com/components">Components</a> ·
-  <a href="https://shadcnspace.com/blocks">Blocks</a> ·
-  <a href="https://shadcnspace.com/templates">Templates</a> ·
-  <a href="https://shadcnspace.com/docs/getting-started/introduction">Docs</a>
-</p>
+## Static deployment
 
-<p align="center">
-<a href="https://x.com/ShadcnSpace" target="_blank">
-    <img src="https://img.shields.io/badge/X-@ShadcnSpace-white?logo=x&logoColor=white" />
-  </a>
-  <img src="https://img.shields.io/badge/license-MIT-blue" />
-</p>
+1. Run `yarn install` in the build environment.
+2. Set `VITE_BASE_PATH` if the public URL has a subdirectory.
+3. Run `yarn build`.
+4. Publish the contents of `dist/` at the matching public URL.
 
-<p align="center">
-  <a href="https://shadcnspace.com">
-  <img
-    alt="Shadcn Space banner"
-    width="1000"
-    src="https://images.shadcnspace.com/assets/github-image.webp"
-  >
-</a>
-</p>
+Configure the web server to serve `index.html` for the site entry point and to preserve static files under the configured base prefix. A subdirectory deployment should publish `dist/` at `/resume/`, not at the domain root. No server-side rendering, API process, or runtime environment variables are required.
 
----
+## Project structure
 
+- `src/App.tsx` — single-page composition
+- `src/components/` — layout, home sections, and UI primitives
+- `src/data/portfolio.ts` — typed portfolio content
+- `src/lib/urls.ts` — base-aware asset and local-link helpers
+- `public/` — static assets
+- `dist/` — generated production output
+
+## License
+
+This project is available under the MIT license. See [LICENSE](LICENSE) for details.
