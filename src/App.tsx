@@ -6,11 +6,9 @@ import FeaturedWork from "@/components/home/featured-work"
 import HeroSection from "@/components/home/hero-section"
 import ProjectOverview from "@/components/home/project-overview"
 import Footer from "@/components/layout/footer"
-import Header from "@/components/layout/header"
 
 const App = () => (
   <>
-    <Header />
     <main>
       <HeroSection />
       <Divider />
