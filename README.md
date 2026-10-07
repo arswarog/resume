@@ -86,6 +86,18 @@ The repository includes [`.env.example`](.env.example) with both supported examp
 
 Configure the web server to serve `index.html` for the site entry point and to preserve static files under the configured base prefix. A subdirectory deployment should publish `dist/` at `/resume/`, not at the domain root. No server-side rendering, API process, or runtime environment variables are required.
 
+## GitHub Pages deployment
+
+The workflow in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds and publishes the site on every push to `master` and on manual runs (Actions → “Deploy to GitHub Pages” → Run workflow). It runs `lint`, `typecheck`, and `test` first, then builds with `VITE_BASE_PATH=/` and deploys `dist/` through the official Pages actions; the build output is never committed.
+
+Required one-time repository setup:
+
+1. Open **Settings → Pages**.
+2. Set **Build and deployment → Source** to **GitHub Actions**.
+3. Set the custom domain there if one is used; DNS must point to GitHub Pages.
+
+`VITE_BASE_PATH: /` in the workflow assumes a domain-root URL. For a project page without a custom domain (`https://<user>.github.io/resume/`), change it to `/resume/` so that assets and local links resolve under the subdirectory.
+
 ## Project structure
 
 - `src/App.tsx` — single-page composition
