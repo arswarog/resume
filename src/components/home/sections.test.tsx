@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import Education from './education';
-import Experience from './experience';
-import FeaturedWork from './featured-work';
-import ProjectOverview from './project-overview';
+import { Education } from './education';
+import { Experience } from './experience';
+import { FeaturedWork } from './featured-work';
+import { ProjectOverview } from './project-overview';
 
 const { urlBase } = vi.hoisted(() => ({ urlBase: { value: '/' } }));
 
