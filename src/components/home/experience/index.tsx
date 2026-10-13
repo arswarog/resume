@@ -1,3 +1,4 @@
+import { CompanyInfo } from './company-info';
 import { Experience } from './experience';
 import { ExperienceContainer } from './experience-container';
 import { ExperienceItem } from './experience-item';
@@ -6,8 +7,13 @@ export function ExperienceBlock() {
     return (
         <ExperienceContainer>
             <Experience
-                icon="/images/companies/tbank.png"
                 role="Старший coretech разработчик"
+                company={
+                    <CompanyInfo
+                        icon="/images/companies/tbank.png"
+                        name="Т-Банк"
+                    />
+                }
                 location="Удаленно"
                 time="2021 – 2026"
             >
@@ -63,8 +69,13 @@ export function ExperienceBlock() {
                 </ExperienceItem>
             </Experience>
             <Experience
-                icon="/images/companies/greendata.jpg"
                 role="Фронтенд разработчик"
+                company={
+                    <CompanyInfo
+                        icon="/images/companies/greendata.jpg"
+                        name="GreenData"
+                    />
+                }
                 location="Удаленно"
                 time="2020 – 2021"
             >
@@ -85,11 +96,13 @@ export function ExperienceBlock() {
                 </ExperienceItem>
             </Experience>
             <Experience
-                icon="/images/companies/thinknetica.png"
                 role="Преподаватель, автор курса"
-                company="Компьютерная академия IT Smart"
-                companyDescription="Дополнительное образование"
-                companyLocation="Краснодар"
+                company={
+                    <CompanyInfo
+                        icon="/images/companies/thinknetica.png"
+                        name="Thinknetica"
+                    />
+                }
                 location="Удаленно"
                 time="2020 – 2020"
             >
