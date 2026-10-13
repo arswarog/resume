@@ -134,6 +134,34 @@ export function ExperienceBlock() {
                     трое.
                 </ExperienceItem>
             </Experience>
+            <Experience
+                role="Преподаватель, автор курса"
+                company={
+                    <CompanyInfo
+                        icon="/images/companies/itsmart.jpg"
+                        name="Академия SMART"
+                        description="Академия компьютерного образования"
+                        location="Краснодар"
+                    />
+                }
+                location="Офис"
+                time="2019 – 2019"
+            >
+                <ExperienceItem>
+                    Разработал и реализовал учебную программу по JavaScript и React для 2 потоков
+                    (более 100 учеников), обучение производилось на тренажерах и примерах
+                    собственной разработки.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Проводил занятия с акцентом на практику для групп 10-15 учеников, достигнув
+                    показателя в 60% успешного окончания курса.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Проверял домашние задания с детальным фидбеком , формируя привычку к лучшим
+                    практикам структурирования кода, результат: успешное освоение базовых и
+                    углубленных библиотек и практик.
+                </ExperienceItem>
+            </Experience>
         </ExperienceContainer>
     );
 }
