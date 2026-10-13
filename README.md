@@ -10,7 +10,7 @@ by any static web server without a Node.js runtime.
   sections
 - Responsive styling with Tailwind CSS
 - Reusable shadcn/ui components
-- Typed local portfolio data with no runtime API requests
+- Static content inlined in composable React components, with no runtime API requests
 - Base-path-aware assets and local links for root and subdirectory deployments
 
 ## Requirements
@@ -119,7 +119,6 @@ resolve under the subdirectory.
 
 - `src/App.tsx` — single-page composition
 - `src/components/` — layout, home sections, and UI primitives
-- `src/data/portfolio.ts` — typed portfolio content
 - `src/lib/urls.ts` — base-aware asset and local-link helpers
 - `public/` — static assets
 - `dist/` — generated production output

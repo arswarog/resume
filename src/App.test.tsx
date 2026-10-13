@@ -44,7 +44,7 @@ describe('App', () => {
         expect(sections[0]).toHaveTextContent('Elena Marsh');
         expect(sections[1]).toHaveTextContent('About Me');
         expect(sections[2]).toHaveTextContent('Featured work');
-        expect(sections[3]).toHaveTextContent('Experience');
+        expect(sections[3]).toHaveTextContent('Опыт работы');
         expect(sections[4]).toHaveTextContent('Education');
         expect(sections[5]).toHaveTextContent('Case studies');
     });

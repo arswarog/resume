@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { Education } from './education';
-import { Experience } from './experience';
-import { FeaturedWork } from './featured-work';
-import { ProjectOverview } from './project-overview';
+import { EducationBlock } from './education';
+import { ExperienceBlock } from './experience';
+import { FeaturedWorkBlock } from './featured-work';
+import { ProjectOverviewBlock } from './project-overview';
 
 const { urlBase } = vi.hoisted(() => ({ urlBase: { value: '/' } }));
 
@@ -26,10 +26,10 @@ describe('static portfolio sections', () => {
         vi.stubGlobal('fetch', fetchMock);
         render(
             <>
-                <FeaturedWork />
-                <Experience />
-                <Education />
-                <ProjectOverview />
+                <FeaturedWorkBlock />
+                <ExperienceBlock />
+                <EducationBlock />
+                <ProjectOverviewBlock />
             </>,
         );
 
@@ -44,7 +44,7 @@ describe('static portfolio sections', () => {
                 'Created a distinctive visual identity and design language to build trust and empathy for a forward-thinking health care provider.',
             ),
         ).toBeInTheDocument();
-        expect(screen.getByText('Product Designer, Tailwind')).toBeInTheDocument();
+        expect(screen.getByText('Старший coretech разработчик')).toBeInTheDocument();
         expect(screen.getByText('B.F.A. in Graphic Design')).toBeInTheDocument();
         expect(screen.getByText('Wellnest')).toBeInTheDocument();
         expect(screen.getByRole('link', { name: /Formless/ })).toHaveAttribute('href', '#');
@@ -56,10 +56,10 @@ describe('static portfolio sections', () => {
         urlBase.value = '/resume/';
         render(
             <>
-                <FeaturedWork />
-                <Experience />
-                <Education />
-                <ProjectOverview />
+                <FeaturedWorkBlock />
+                <ExperienceBlock />
+                <EducationBlock />
+                <ProjectOverviewBlock />
             </>,
         );
 
