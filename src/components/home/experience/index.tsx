@@ -12,6 +12,8 @@ export function ExperienceBlock() {
                     <CompanyInfo
                         icon="/images/companies/tbank.png"
                         name="Т-Банк"
+                        description="Системообразующий банк"
+                        location="Краснодар"
                     />
                 }
                 location="Удаленно"
@@ -74,6 +76,8 @@ export function ExperienceBlock() {
                     <CompanyInfo
                         icon="/images/companies/greendata.jpg"
                         name="GreenData"
+                        description="Low-code платформа для банков"
+                        location="Пермь"
                     />
                 }
                 location="Удаленно"
@@ -101,6 +105,8 @@ export function ExperienceBlock() {
                     <CompanyInfo
                         icon="/images/companies/thinknetica.png"
                         name="Thinknetica"
+                        description="Онлайн-школа для разработчиков"
+                        location="Москва"
                     />
                 }
                 location="Удаленно"
