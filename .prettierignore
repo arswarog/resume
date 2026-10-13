@@ -1,0 +1,7 @@
+dist
+coverage
+.vitest
+node_modules
+.yarn
+.idea
+*.tsbuildinfo
