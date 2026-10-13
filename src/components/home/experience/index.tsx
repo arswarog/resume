@@ -203,6 +203,32 @@ export function ExperienceBlock() {
                     систему в строй за 4 часа, минимизировав риски человеческого фактора.
                 </ExperienceItem>
             </Experience>
+            <Experience
+                role="Фулстек разработчик"
+                company={
+                    <CompanyInfo
+                        icon="/images/companies/likisporta.png"
+                        name="LikiSporta"
+                        description="Соц. сеть стартап"
+                        location="Краснодар"
+                    />
+                }
+                location="Офис"
+                time="2017 – 2018"
+            >
+                <ExperienceItem>
+                    Развивал фронтенд продукта на Vue.js: участвовал в полном цикле создания фич —
+                    от проектирования архитектуры разделов и планирования контрактов API до релиза.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Влиял на продукт: анализировал пользовательские сценарии и инициировал
+                    UX-улучшения, делая интерфейс соцсети более интуитивным и вовлекающим.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Контролировал качество: самостоятельно проводил тестирование результатов и
+                    отладку, обеспечивая стабильность новых функций до их выхода на пользователей.
+                </ExperienceItem>
+            </Experience>
         </ExperienceContainer>
     );
 }
