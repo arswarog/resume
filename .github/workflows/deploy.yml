@@ -46,6 +46,9 @@ jobs:
       - name: Lint
         run: yarn lint
 
+      - name: Check formatting
+        run: yarn prettier:check
+
       - name: Typecheck
         run: yarn typecheck
 
