@@ -1,17 +1,24 @@
 const Footer = () => (
-  <footer className="-translate-y-px bg-white border-t border-border">
-    <div className="container">
-      <div className="border-x border-border">
-        <div className="max-w-3xl mx-auto gap-10 sm:gap-16 px-4 sm:px-7 py-4 md:py-7">
-          <p>
-            2026 © Designed by{" "}
-            <a href="https://shadcnspace.com/" target="_blank" rel="noreferrer" className="hover:text-primary">shadcnspace.com</a>{" "}
-            — All rights reserved{" "}
-          </p>
+    <footer className="-translate-y-px bg-white border-t border-border">
+        <div className="container">
+            <div className="border-x border-border">
+                <div className="max-w-3xl mx-auto gap-10 sm:gap-16 px-4 sm:px-7 py-4 md:py-7">
+                    <p>
+                        2026 © Designed by{' '}
+                        <a
+                            href="https://shadcnspace.com/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-primary"
+                        >
+                            shadcnspace.com
+                        </a>{' '}
+                        — All rights reserved{' '}
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </footer>
-)
+    </footer>
+);
 
-export default Footer
+export default Footer;

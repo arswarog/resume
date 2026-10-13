@@ -1,10 +1,13 @@
 # Typefolio
 
-Typefolio is a clean, responsive one-page portfolio built with React, TypeScript, Vite, Tailwind CSS, and shadcn/ui. The application is a static single-page site: the production build can be served by any static web server without a Node.js runtime.
+Typefolio is a clean, responsive one-page portfolio built with React, TypeScript, Vite, Tailwind
+CSS, and shadcn/ui. The application is a static single-page site: the production build can be served
+by any static web server without a Node.js runtime.
 
 ## Features
 
-- One-page portfolio layout with hero, about, education, experience, featured work, and project sections
+- One-page portfolio layout with hero, about, education, experience, featured work, and project
+  sections
 - Responsive styling with Tailwind CSS
 - Reusable shadcn/ui components
 - Typed local portfolio data with no runtime API requests
@@ -15,7 +18,8 @@ Typefolio is a clean, responsive one-page portfolio built with React, TypeScript
 - Node.js `^20.19.0 || >=22.12.0` (20.19.0 or newer on the 20.x line, or 22.12.0 or newer)
 - Corepack-enabled Yarn
 
-The repository pins the Yarn release in `package.json`. Enable Corepack once on a new machine, then use Yarn for every project command:
+The repository pins the Yarn release in `package.json`. Enable Corepack once on a new machine, then
+use Yarn for every project command:
 
 ```bash
 corepack enable
@@ -59,7 +63,10 @@ yarn preview
 
 ## Base-path deployments
 
-`VITE_BASE_PATH` is a Vite build-time deployment prefix. It must include the public subdirectory when the site is served below the domain root. Vite and the application's URL helpers normalize the value to one leading and trailing slash, so `/resume`, `/resume/`, and `///resume///` produce the same `/resume/` prefix; `/` produces `/`.
+`VITE_BASE_PATH` is a Vite build-time deployment prefix. It must include the public subdirectory
+when the site is served below the domain root. Vite and the application's URL helpers normalize the
+value to one leading and trailing slash, so `/resume`, `/resume/`, and `///resume///` produce the
+same `/resume/` prefix; `/` produces `/`.
 
 For a site served at `https://example.com/resume/`, run the exact build command:
 
@@ -67,7 +74,8 @@ For a site served at `https://example.com/resume/`, run the exact build command:
 VITE_BASE_PATH=/resume/ yarn build
 ```
 
-This prefixes the generated entry files, assets, icons, favicon, and local application links with `/resume/`. For a root deployment, omit the variable or use `VITE_BASE_PATH=/`:
+This prefixes the generated entry files, assets, icons, favicon, and local application links with
+`/resume/`. For a root deployment, omit the variable or use `VITE_BASE_PATH=/`:
 
 ```bash
 yarn build
@@ -75,7 +83,8 @@ yarn build
 VITE_BASE_PATH=/ yarn build
 ```
 
-The repository includes [`.env.example`](.env.example) with both supported examples. Environment values are read during the build and are not changed by `yarn preview` or by the static web server.
+The repository includes [`.env.example`](.env.example) with both supported examples. Environment
+values are read during the build and are not changed by `yarn preview` or by the static web server.
 
 ## Static deployment
 
@@ -84,11 +93,17 @@ The repository includes [`.env.example`](.env.example) with both supported examp
 3. Run `yarn build`.
 4. Publish the contents of `dist/` at the matching public URL.
 
-Configure the web server to serve `index.html` for the site entry point and to preserve static files under the configured base prefix. A subdirectory deployment should publish `dist/` at `/resume/`, not at the domain root. No server-side rendering, API process, or runtime environment variables are required.
+Configure the web server to serve `index.html` for the site entry point and to preserve static files
+under the configured base prefix. A subdirectory deployment should publish `dist/` at `/resume/`,
+not at the domain root. No server-side rendering, API process, or runtime environment variables are
+required.
 
 ## GitHub Pages deployment
 
-The workflow in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds and publishes the site on every push to `master` and on manual runs (Actions → “Deploy to GitHub Pages” → Run workflow). It runs `lint`, `typecheck`, and `test` first, then builds with `VITE_BASE_PATH=/` and deploys `dist/` through the official Pages actions; the build output is never committed.
+The workflow in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds and publishes
+the site on every push to `master` and on manual runs (Actions → “Deploy to GitHub Pages” → Run
+workflow). It runs `lint`, `typecheck`, and `test` first, then builds with `VITE_BASE_PATH=/` and
+deploys `dist/` through the official Pages actions; the build output is never committed.
 
 Required one-time repository setup:
 
@@ -96,7 +111,9 @@ Required one-time repository setup:
 2. Set **Build and deployment → Source** to **GitHub Actions**.
 3. Set the custom domain there if one is used; DNS must point to GitHub Pages.
 
-`VITE_BASE_PATH: /` in the workflow assumes a domain-root URL. For a project page without a custom domain (`https://<user>.github.io/resume/`), change it to `/resume/` so that assets and local links resolve under the subdirectory.
+`VITE_BASE_PATH: /` in the workflow assumes a domain-root URL. For a project page without a custom
+domain (`https://<user>.github.io/resume/`), change it to `/resume/` so that assets and local links
+resolve under the subdirectory.
 
 ## Project structure
 
