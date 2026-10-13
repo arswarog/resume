@@ -85,18 +85,35 @@ export function ExperienceBlock() {
                 </ExperienceItem>
             </Experience>
             <Experience
-                icon="/images/icon/asana-icon.svg"
-                role="UI/UX Designer - Asana"
-                location="New York, NY"
-                time="2019 – 2022"
+                icon="/images/companies/thinknetica.png"
+                role="Преподаватель, автор курса"
+                company="Компьютерная академия IT Smart"
+                companyDescription="Дополнительное образование"
+                companyLocation="Краснодар"
+                location="Удаленно"
+                time="2020 – 2020"
             >
                 <ExperienceItem>
-                    Created design systems for client projects across finance and healthcare
+                    Разработал и реализовал учебную программу по TypeScript для 3 потоков (более 150
+                    учеников), структурировав контент по прогрессивной сложности (базовые типы →
+                    generic types → продвинутые паттерны) с фокусом на практическое применение в
+                    React-проектах.
                 </ExperienceItem>
                 <ExperienceItem>
-                    Conducted user testing and research to validate designs
+                    Проводил еженедельные лекции и практические занятия для групп 40-50 учеников,
+                    достигнув показателя в 70% успешного окончания курса.
                 </ExperienceItem>
-                <ExperienceItem>Helped junior designers grow via mentorship</ExperienceItem>
+                <ExperienceItem>
+                    Менторил 12 учеников индивидуально: ревью кода, архитектурные консультации по
+                    организации frontend-проектов, помощь с типизацией и оптимизацией — результат:
+                    все успешно закончили курс, и как минимум 4 трудоустроились в крупные компании.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Проверял домашние задания с детальным фидбеком на примерах из production-кода,
+                    формируя привычку к code review и лучшим практикам (testing, TypeScript strict
+                    mode, структурирование кода) — снижение типичных ошибок типизации у новичков в
+                    трое.
+                </ExperienceItem>
             </Experience>
         </ExperienceContainer>
     );
