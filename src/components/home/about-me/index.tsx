@@ -5,35 +5,49 @@ export function AboutMeBlock() {
     return (
         <AboutMeContainer>
             <div className="flex flex-col gap-4">
-                <p className="text-sm tracking-[2px] text-primary uppercase font-medium">
-                    About Me
-                </p>
+                <p className="text-sm tracking-[2px] text-primary uppercase font-medium">Обо мне</p>
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px]">
-                    Hey there. I&apos;m Elena — UX/UI designer based in Brooklyn, currently{' '}
-                    <span className="bg-[linear-gradient(90deg,_rgba(243,202,77,0.4)_0%,_rgba(243,202,77,0.05)_100%)]">
-                        crafting digital products
-                    </span>{' '}
-                    at <span className="border-b-2">WrapPixel</span>, a SaaS startup focused on
-                    productivity tools.
+                    Senior Frontend Engineer с 6 лет опыта в финтехе (coretech).
                 </h2>
+                <h3>
+                    Разрабатываю{' '}
+                    <span className="bg-[linear-gradient(90deg,_rgba(243,202,77,0.4)_0%,_rgba(243,202,77,0.05)_100%)]">
+                        высоконагруженные
+                    </span>{' '}
+                    инструменты для продуктовых команд, документирую решения и менторирую
+                    middle/junior разработчиков.
+                    <hr />
+                </h3>
                 <h5 className="text-secondary font-normal">
-                    Previously at Oak Studio, and creator of DesignKit and MentalWell.
+                    Специализируюсь на{' '}
+                    <span className="bg-[linear-gradient(90deg,_rgba(243,202,77,0.4)_0%,_rgba(243,202,77,0.05)_100%)]">
+                        проектировании
+                    </span>{' '}
+                    frontend-архитектуры (
+                    <span className="border-b-2">модульность, AFF, BFF, стейт менеджеры</span>),
+                    стандартизации контрактов с backend и внедрении инженерных практик (
+                    <span className="border-b-2">TDD, CI/CD, performance audit</span>).
                 </h5>
             </div>
             <div className="flex flex-col gap-4">
-                <p className="text-sm text-primary uppercase font-medium">Services</p>
+                <p className="text-sm tracking-[2px] text-primary uppercase font-medium">Навыки</p>
                 <div className="flex flex-wrap gap-2 sm:gap-3">
-                    <ServiceBadge>Graphic Design</ServiceBadge>
-                    <ServiceBadge>User Experience</ServiceBadge>
-                    <ServiceBadge>Mobile App Design</ServiceBadge>
-                    <ServiceBadge>Brand Identity</ServiceBadge>
-                    <ServiceBadge>Responsive Design</ServiceBadge>
-                    <ServiceBadge>Prototyping</ServiceBadge>
-                    <ServiceBadge>Illustration</ServiceBadge>
-                    <ServiceBadge>Motion Graphics</ServiceBadge>
-                    <ServiceBadge>Print Design</ServiceBadge>
-                    <ServiceBadge>UI Development</ServiceBadge>
-                    <ServiceBadge>Interactive Media</ServiceBadge>
+                    <ServiceBadge>Agentic programming</ServiceBadge>
+                    <ServiceBadge>Архитектура</ServiceBadge>
+                    <ServiceBadge>RAG</ServiceBadge>
+                    <ServiceBadge>React</ServiceBadge>
+                    <ServiceBadge>TypeScript</ServiceBadge>
+                    <ServiceBadge>Docker</ServiceBadge>
+                    <ServiceBadge>CI/CD</ServiceBadge>
+                    <ServiceBadge>UX</ServiceBadge>
+                    <ServiceBadge>GIT</ServiceBadge>
+                    <ServiceBadge>Node.js</ServiceBadge>
+                    <ServiceBadge>State manager</ServiceBadge>
+                    <ServiceBadge>REST</ServiceBadge>
+                    <ServiceBadge>RxJs</ServiceBadge>
+                    <ServiceBadge>Redux</ServiceBadge>
+                    <ServiceBadge>FSD</ServiceBadge>
+                    <ServiceBadge>FEOD</ServiceBadge>
                 </div>
             </div>
         </AboutMeContainer>
