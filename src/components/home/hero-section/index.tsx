@@ -39,37 +39,23 @@ export function HeroSectionBlock() {
                             label="Github"
                         />
                         <SocialLink
-                            href="https://t.me/arswarog"
-                            icon="/images/telegram.svg"
-                            label="Telegram"
-                        />
-                        <SocialLink
                             href="https://career.habr.com/arswarog"
                             icon="/images/habr-career.svg"
                             label="Хабр Карьера"
                         />
                     </div>
                     <Button
-                        className="h-auto rounded-full p-0"
+                        className="h-auto rounded-full px-3 py-2.5 gap-3 bg-[#F3CA4D] text-primary transition-colors duration-300 hover:bg-[#E5B93D]"
                         nativeButton={false}
-                        render={
-                            <a
-                                href="#"
-                                className="inline-block p-0.5 rounded-full bg-[linear-gradient(96.09deg,_#9282F8_12.17%,_#F3CA4D_90.71%)]"
-                            />
-                        }
+                        render={<a href="https://t.me/arswarog" />}
                     >
-                        <span className="flex items-center gap-3 bg-primary hover:bg-[linear-gradient(96.09deg,_#9282F8_12.17%,_#F3CA4D_90.71%)] py-2.5 px-5 rounded-full">
-                            <img
-                                src={assetUrl('/images/icon/spark-icon.svg')}
-                                alt="spark-icon"
-                                width={14}
-                                height={14}
-                            />
-                            <span className="text-sm sm:text-base font-semibold text-white">
-                                Get in touch
-                            </span>
-                        </span>
+                        <img
+                            src={assetUrl('/images/telegram.svg')}
+                            alt="Telegram"
+                            width={24}
+                            height={24}
+                        />
+                        <span className="text-sm sm:text-base font-semibold">Напишите мне</span>
                     </Button>
                 </div>
             </div>
