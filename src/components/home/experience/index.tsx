@@ -1,61 +1,262 @@
-import { assetUrl } from '@/lib/urls';
-import { experienceData } from '@/data/portfolio';
+import { CompanyInfo } from './company-info';
+import { Experience } from './experience';
+import { ExperienceContainer } from './experience-container';
+import { ExperienceItem } from './experience-item';
 
-const Experience = () => (
-    <section>
-        <div className="container">
-            <div className="border-x border-border">
-                <div className="flex flex-col max-w-3xl mx-auto py-10 px-4 sm:px-7">
-                    <div className="flex flex-col xs:flex-row gap-5 items-center justify-between">
-                        <p className="text-sm tracking-[2px] text-primary uppercase font-medium">
-                            Experience
-                        </p>
-                    </div>
-                </div>
-                <div className="border-t border-border">
-                    <div className="flex flex-col max-w-3xl mx-auto px-4 sm:px-7 py-9 md:py-16">
-                        {experienceData.map((value) => (
-                            <div
-                                key={value.role}
-                                className="flex flex-col gap-5 border-dashed border-b border-border last:border-b-0 pt-8 sm:pt-10 pb-8 sm:pb-10 first:pt-0 last:pb-0"
-                            >
-                                <img
-                                    src={assetUrl(value.icon)}
-                                    alt="icon"
-                                    width={32}
-                                    height={19}
-                                />
-                                <div className="flex flex-wrap gap-5 items-center justify-between">
-                                    <h5>{value.role}</h5>
-                                    <div className="flex items-center gap-2.5 border border-border rounded-lg py-1.5 px-3">
-                                        <div
-                                            className={`w-4 h-2 rounded-sm ${value.endYear === 'Present' ? 'bg-primary' : 'bg-primary/10'}`}
-                                        />
-                                        <p className="text-sm xs:text-base text-primary">
-                                            {value.startYear} – {value.endYear} · {value.location}
-                                        </p>
-                                    </div>
-                                </div>
-                                <ul>
-                                    {value.bulletPoints.map((point) => (
-                                        <li
-                                            key={point}
-                                            className="flex items-start gap-2 text-base font-normal text-muted-foreground"
-                                        >
-                                            <span className="w-2.5 h-2.5 text-muted-foreground">
-                                                •
-                                            </span>
-                                            {point}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-);
-
-export default Experience;
+export function ExperienceBlock() {
+    return (
+        <ExperienceContainer>
+            <Experience
+                role="Старший coretech разработчик"
+                company={
+                    <CompanyInfo
+                        icon="/images/companies/tbank.png"
+                        name="Т-Банк"
+                        description="Системообразующий банк"
+                        location="Краснодар"
+                    />
+                }
+                location="Удаленно"
+                time="2021 – 2026"
+            >
+                <ExperienceItem>
+                    Провёл глубокий аудит Playwright и переработку её API для E2E-тестирования;
+                    помог 6 командам ускорить внедрение тестов в 2 раза, что заметно повысило
+                    скорость доставки и уверенность в качестве production.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Выявил критические боли в API собственной библиотеки через догфудинг (внедрение
+                    в собственные продукты); провёл переработку, упростив интеграцию для 10+ команд
+                    и снизив когнитивную нагрузку на разработку.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Спроектировал и задокументировал новую библиотеку управления состоянием с
+                    прозрачностью сценариев и side-effects; упростил отладку и ускорил онбординг
+                    продуктовых команд на 60%.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Спроектировал и реализовал универсальный компонент ввода кода подтверждения,
+                    внедрённый 10+ продуктовыми командами; сократил time-to-market типовых фич на 3
+                    дня.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Разработал стандарты и рекомендации по реализации продуктовых сценариев, включая
+                    архитектурные паттерны; сократил время адаптации новых разработчиков в несколько
+                    раз и повысил консистентность кода во всех проектах.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Проводил архитектурные ревью продуктовых команд, выявляя и помогая исправлять
+                    архитектурные антипаттерны; предотвратил потенциальные сложности в развитии и
+                    переделках в production.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Провёл аудит мёртвого кода в библиотеке компонентов (TypeScript, CSS) и
+                    подготовил повторяемый процесс контроля; сократил размер финального бандла на
+                    18%, улучшив Core Web Vitals и снизив нагрузку на сеть клиентов.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Оптимизировал CI/CD pipeline сборки библиотек: ускорил доставку версий до
+                    продуктовых команд на 25%, внедрил canary-релизы для безопасного тестирования
+                    обновлений и снижения риска регрессий.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Спроектировал и реализовал BFF, оптимизировав сборку Docker-контейнеров; снизил
+                    время загрузки страниц и размер бандла клиента, улучшив пользовательский опыт на
+                    300мс.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Выявил и устранил критические баги в сборке и отображении продуктовых метрик,
+                    предотвратив потерю важных аналитических сигналов и риск ошибочных
+                    бизнес-решений.
+                </ExperienceItem>
+            </Experience>
+            <Experience
+                role="Фронтенд разработчик"
+                company={
+                    <CompanyInfo
+                        icon="/images/companies/greendata.jpg"
+                        name="GreenData"
+                        description="Low-code платформа для банков"
+                        location="Пермь"
+                    />
+                }
+                location="Удаленно"
+                time="2020 – 2021"
+            >
+                <ExperienceItem>
+                    Улучшил документацию архитектуры проекта, что снизило время онбординга новых
+                    разработчиков и выявило критические пробелы в текущем подходе к модульности;
+                    инициировал рефакторинг легаси-кода на основе полученных insights.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Разработал интерфейс создания сложного запроса к БД с произвольным набором
+                    фильтров, таблиц, группировок и отношений, реализовал просмотр результата
+                    запроса в реальном времени.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Инициировал и провёл рефакторинг монолитного компонента на 5 000+ строк кода,
+                    заменив его композицией простых компонентов, улучшив читаемость и ускорив
+                    разработку новых фич.
+                </ExperienceItem>
+            </Experience>
+            <Experience
+                role="Преподаватель, автор курса"
+                company={
+                    <CompanyInfo
+                        icon="/images/companies/thinknetica.png"
+                        name="Thinknetica"
+                        description="Онлайн-школа для разработчиков"
+                        location="Москва"
+                    />
+                }
+                location="Удаленно"
+                time="2020 – 2020"
+            >
+                <ExperienceItem>
+                    Разработал и реализовал учебную программу по TypeScript для 3 потоков (более 150
+                    учеников), структурировав контент по прогрессивной сложности (базовые типы →
+                    generic types → продвинутые паттерны) с фокусом на практическое применение в
+                    React-проектах.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Проводил еженедельные лекции и практические занятия для групп 40-50 учеников,
+                    достигнув показателя в 70% успешного окончания курса.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Менторил 12 учеников индивидуально: ревью кода, архитектурные консультации по
+                    организации frontend-проектов, помощь с типизацией и оптимизацией — результат:
+                    все успешно закончили курс, и как минимум 4 трудоустроились в крупные компании.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Проверял домашние задания с детальным фидбеком на примерах из production-кода,
+                    формируя привычку к code review и лучшим практикам (testing, TypeScript strict
+                    mode, структурирование кода) — снижение типичных ошибок типизации у новичков в
+                    трое.
+                </ExperienceItem>
+            </Experience>
+            <Experience
+                role="Преподаватель, автор курса"
+                company={
+                    <CompanyInfo
+                        icon="/images/companies/itsmart.jpg"
+                        name="Академия SMART"
+                        description="Академия компьютерного образования"
+                        location="Краснодар"
+                    />
+                }
+                location="Офис"
+                time="2019 – 2019"
+            >
+                <ExperienceItem>
+                    Разработал и реализовал учебную программу по JavaScript и React для 2 потоков
+                    (более 100 учеников), обучение производилось на тренажерах и примерах
+                    собственной разработки.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Проводил занятия с акцентом на практику для групп 10-15 учеников, достигнув
+                    показателя в 60% успешного окончания курса.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Проверял домашние задания с детальным фидбеком , формируя привычку к лучшим
+                    практикам структурирования кода, результат: успешное освоение базовых и
+                    углубленных библиотек и практик.
+                </ExperienceItem>
+            </Experience>
+            <Experience
+                role="Фулстек разработчик"
+                company={
+                    <CompanyInfo
+                        icon="/images/companies/squilla.png"
+                        name="Squilla Fund"
+                        description="Анализ ICO и P2P площадка криптозаймов"
+                        location="Краснодар"
+                    />
+                }
+                location="Офис"
+                time="2018 – 2020"
+            >
+                <ExperienceItem>
+                    Спроектировал frontend-архитектуру финтех-платформы на Angular/TypeScript,
+                    стандартизировав контракты с backend через Swagger/OpenAPI и codegen типов;
+                    синхронизировал схемы между фронтом и 6 микросервисами, обеспечив consistency и
+                    снизив время интеграции новых API.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Инициировал и внедрил CI/CD-пайплайны в GitLab CI (линтинг, unit-тесты,
+                    blue/green-деплой): сократил время выката релиза с 60 до 8 минут (~87%
+                    ускорение).
+                </ExperienceItem>
+                <ExperienceItem>
+                    Оптимизировал доставку frontend-ассетов под пиковую нагрузку (1 000 rps):
+                    настроил nginx (brotli-сжатие, кэширование), обеспечил авто-деплой с простоем
+                    {' <'}10 сек, снизил медианную латентность API на 40% и повысил стабильность
+                    платформы в критические торговые моменты.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Интегрировал и оптимизировал промо-инфраструктуру: провел рефакторинг, внедрил
+                    CDN и улучшил метрики проекта, сократив время загрузки промо-страниц на 35% и
+                    обеспечив бесшовную синхронизацию с основной системой.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Восстановил продакшн-инфраструктуру после потери владельца модуля: развернул
+                    сервисы из бэкапов, перенастроил пайплайны и документировал процессы — вернул
+                    систему в строй за 4 часа, минимизировав риски человеческого фактора.
+                </ExperienceItem>
+            </Experience>
+            <Experience
+                role="Фулстек разработчик"
+                company={
+                    <CompanyInfo
+                        icon="/images/companies/likisporta.png"
+                        name="LikiSporta"
+                        description="Соц. сеть стартап"
+                        location="Краснодар"
+                    />
+                }
+                location="Офис"
+                time="2017 – 2018"
+            >
+                <ExperienceItem>
+                    Развивал фронтенд продукта на Vue.js: участвовал в полном цикле создания фич —
+                    от проектирования архитектуры разделов и планирования контрактов API до релиза.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Влиял на продукт: анализировал пользовательские сценарии и инициировал
+                    UX-улучшения, делая интерфейс соцсети более интуитивным и вовлекающим.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Контролировал качество: самостоятельно проводил тестирование результатов и
+                    отладку, обеспечивая стабильность новых функций до их выхода на пользователей.
+                </ExperienceItem>
+            </Experience>
+            <Experience
+                role="Довлатов Центр"
+                company={
+                    <CompanyInfo
+                        icon="/images/companies/dowlatow.jpg"
+                        name="Довлатов Центр"
+                        description="Инфобизнес"
+                        location="Москва"
+                    />
+                }
+                location="Удаленно"
+                time="2015 – 2017"
+            >
+                <ExperienceItem>
+                    Спроектировал и интегрировал плагины в WordPress, повысив вовлеченность
+                    подписчиков на 20%; разработал функции подписок и ежедневных занятий с учетов
+                    выбранных тарифных планов, напоминание об уроках.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Разработал высоконагруженный движок рендеринга и шаблонизации презентаций,
+                    обрабатывающий, рассчитанный на 2000rps.
+                </ExperienceItem>
+                <ExperienceItem>
+                    Внедрился в нестандартную legacy-архитектуру кодовой базы (самописный движок),
+                    провел анализ и рефакторинг модуля планирования и запуска видеозвонков, повысив
+                    поддерживаемость и понятность кода.
+                </ExperienceItem>
+            </Experience>
+        </ExperienceContainer>
+    );
+}
