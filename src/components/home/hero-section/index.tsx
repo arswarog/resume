@@ -19,8 +19,8 @@ export function HeroSectionBlock() {
                     <span className="absolute bottom-2.5 right-5 w-4 h-4 bg-green-500 border-2 border-white rounded-full" />
                 </div>
                 <div className="flex flex-col gap-2 sm:gap-3 items-center text-center xs:items-start">
-                    <h1>Elena Marsh</h1>
-                    <p className="text-violet-700 font-normal">Senior UI &amp; UX Designer</p>
+                    <h1>Евгений Лубяной</h1>
+                    <p className="text-violet-700 font-normal">Senior Web Developer</p>
                     <div className="flex items-center gap-2">
                         <img
                             src={assetUrl('/images/icon/map-icon.svg')}
@@ -28,7 +28,7 @@ export function HeroSectionBlock() {
                             width={20}
                             height={20}
                         />
-                        <p className="text-primary">Brooklyn, NYC</p>
+                        <p className="text-primary">Краснодар</p>
                     </div>
                 </div>
                 <div className="flex flex-col md:flex-row items-center gap-4">
