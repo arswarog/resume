@@ -34,19 +34,19 @@ export function HeroSectionBlock() {
                 <div className="flex flex-col md:flex-row items-center gap-4">
                     <div className="flex items-center gap-2">
                         <SocialLink
-                            href="https://twitter.com"
-                            icon="/images/icon/twitter-icon.svg"
-                            label="Twitter"
+                            href="https://github.com/arswarog"
+                            icon="/images/github.svg"
+                            label="Github"
                         />
                         <SocialLink
-                            href="https://behance.com"
-                            icon="/images/icon/behance-icon.svg"
-                            label="Behance"
+                            href="https://t.me/arswarog"
+                            icon="/images/telegram.svg"
+                            label="Telegram"
                         />
                         <SocialLink
-                            href="https://dribble.com"
-                            icon="/images/icon/dribble-icon.svg"
-                            label="Dribble"
+                            href="https://career.habr.com/arswarog"
+                            icon="/images/habr-career.svg"
+                            label="Хабр Карьера"
                         />
                     </div>
                     <Button
