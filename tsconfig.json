@@ -18,8 +18,7 @@
         "jsx": "react-jsx",
         "incremental": true,
         "types": [
-            "vite/client",
-            "vitest/globals"
+            "vite/client"
         ],
         "paths": {
             "@/*": [
@@ -29,7 +28,6 @@
     },
     "include": [
         "src",
-        "vite.config.ts",
-        "vitest.config.ts"
+        "vite.config.ts"
     ]
 }
