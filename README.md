@@ -1,128 +1,144 @@
-# Typefolio
+# Евгений Лубяной
 
-Typefolio is a clean, responsive one-page portfolio built with React, TypeScript, Vite, Tailwind
-CSS, and shadcn/ui. The application is a static single-page site: the production build can be served
-by any static web server without a Node.js runtime.
+**Senior Web Developer** · Краснодар
 
-## Features
+[GitHub](https://github.com/arswarog) · [Хабр Карьера](https://career.habr.com/arswarog) ·
+[Telegram](https://t.me/arswarog)
 
-- One-page portfolio layout with hero, about, education, experience, featured work, and project
-  sections
-- Responsive styling with Tailwind CSS
-- Reusable shadcn/ui components
-- Static content inlined in composable React components, with no runtime API requests
-- Base-path-aware assets and local links for root and subdirectory deployments
+## Обо мне
 
-## Requirements
+Senior Frontend Engineer с 6 лет опыта в финтехе (coretech).
 
-- Node.js `^20.19.0 || >=22.12.0` (20.19.0 or newer on the 20.x line, or 22.12.0 or newer)
-- Corepack-enabled Yarn
+Разрабатываю **высоконагруженные** инструменты для продуктовых команд, документирую решения и
+менторирую middle/junior разработчиков.
 
-The repository pins the Yarn release in `package.json`. Enable Corepack once on a new machine, then
-use Yarn for every project command:
+Специализируюсь на **проектировании** frontend-архитектуры (модульность, AFF, BFF, стейт менеджеры),
+стандартизации контрактов с backend и внедрении инженерных практик (TDD, CI/CD, performance audit).
 
-```bash
-corepack enable
-yarn install
-```
+## Навыки
 
-## Development
+`Agentic programming` · `Архитектура` · `RAG` · `React` · `TypeScript` · `Docker` · `CI/CD` · `UX` ·
+`GIT` · `Node.js` · `State manager` · `REST` · `RxJs` · `Redux` · `FSD` · `FEOD`
 
-Start the Vite development server:
+## Опыт работы
 
-```bash
-yarn start
-```
+### Т-Банк — Старший coretech разработчик
 
-Open the URL printed by Vite, usually <http://localhost:5173/>.
+_Системообразующий банк · Краснодар · Удаленно · 2021 – 2026_
 
-## Checks
+- Спроектировал и задокументировал новую библиотеку управления состоянием с прозрачностью сценариев
+  и side-effects; упростил отладку и ускорил онбординг продуктовых команд на 60%.
+- Разработал стандарты и рекомендации по реализации продуктовых сценариев, включая архитектурные
+  паттерны; сократил время адаптации новых разработчиков в несколько раз и повысил консистентность
+  кода во всех проектах.
+- Проводил архитектурные ревью продуктовых команд, выявляя и помогая исправлять архитектурные
+  антипаттерны; предотвратил потенциальные сложности в развитии и переделках в production.
+- Провёл глубокий аудит Playwright и переработку её API для E2E-тестирования; помог 6 командам
+  ускорить внедрение тестов в 2 раза, что заметно повысило скорость доставки и уверенность в
+  качестве production.
+- Провёл аудит мёртвого кода в библиотеке компонентов (TypeScript, CSS) и подготовил повторяемый
+  процесс контроля; сократил размер финального бандла на 18%, улучшив Core Web Vitals и снизив
+  нагрузку на сеть клиентов.
+- Выявил критические боли в API собственной библиотеки через догфудинг (внедрение в собственные
+  продукты); провёл переработку, упростив интеграцию для 10+ команд и снизив когнитивную нагрузку на
+  разработку.
+- Спроектировал и реализовал универсальный компонент ввода кода подтверждения, внедрённый 10+
+  продуктовыми командами; сократил time-to-market типовых фич на 3 дня.
+- Оптимизировал CI/CD pipeline сборки библиотек: ускорил доставку версий до продуктовых команд на
+  25%, внедрил canary-релизы для безопасного тестирования обновлений и снижения риска регрессий.
+- Спроектировал и реализовал BFF, оптимизировав сборку Docker-контейнеров; снизил время загрузки
+  страниц и размер бандла клиента, улучшив пользовательский опыт на 300мс.
+- Выявил и устранил критические баги в сборке и отображении продуктовых метрик, предотвратив потерю
+  важных аналитических сигналов и риск ошибочных бизнес-решений.
 
-Run the automated checks before publishing a build. These are the repository's tested Yarn scripts:
+### GreenData — Фронтенд разработчик
 
-```bash
-yarn test
-yarn lint
-yarn typecheck
-yarn build
-```
+_Low-code платформа для банков · Пермь · Удаленно · 2020 – 2021_
 
-## Production build
+- Улучшил документацию архитектуры проекта, что снизило время онбординга новых разработчиков и
+  выявило критические пробелы в текущем подходе к модульности; инициировал рефакторинг легаси-кода
+  на основе полученных insights.
+- Разработал интерфейс создания сложного запроса к БД с произвольным набором фильтров, таблиц,
+  группировок и отношений, реализовал просмотр результата запроса в реальном времени.
+- Инициировал и провёл рефакторинг монолитного компонента на 5 000+ строк кода, заменив его
+  композицией простых компонентов, улучшив читаемость и ускорив разработку новых фич.
 
-Build the site for a domain-root deployment. The compiled files are written to `dist/`:
+### Thinknetica — Преподаватель, автор курса
 
-```bash
-yarn build
-```
+_Онлайн-школа для разработчиков · Москва · Удаленно · 2020 – 2020_
 
-Preview the current `dist/` output locally:
+- Разработал и реализовал учебную программу по TypeScript для 3 потоков (более 150 учеников),
+  структурировав контент по прогрессивной сложности (базовые типы → generic types → продвинутые
+  паттерны) с фокусом на практическое применение в React-проектах.
+- Проводил еженедельные лекции и практические занятия для групп 40-50 учеников, достигнув показателя
+  в 70% успешного окончания курса.
+- Менторил 12 учеников индивидуально: ревью кода, архитектурные консультации по организации
+  frontend-проектов, помощь с типизацией и оптимизацией — результат: все успешно закончили курс, и
+  как минимум 4 трудоустроились в крупные компании.
+- Проверял домашние задания с детальным фидбеком на примерах из production-кода, формируя привычку к
+  code review и лучшим практикам (testing, TypeScript strict mode, структурирование кода) — снижение
+  типичных ошибок типизации у новичков в трое.
 
-```bash
-yarn preview
-```
+### Академия SMART — Преподаватель, автор курса
 
-## Base-path deployments
+_Академия компьютерного образования · Краснодар · Офис · 2019 – 2019_
 
-`VITE_BASE_PATH` is a Vite build-time deployment prefix. It must include the public subdirectory
-when the site is served below the domain root. Vite and the application's URL helpers normalize the
-value to one leading and trailing slash, so `/resume`, `/resume/`, and `///resume///` produce the
-same `/resume/` prefix; `/` produces `/`.
+- Разработал и реализовал учебную программу по JavaScript и React для 2 потоков (более 100
+  учеников), обучение производилось на тренажерах и примерах собственной разработки.
+- Проводил занятия с акцентом на практику для групп 10-15 учеников, достигнув показателя в 60%
+  успешного окончания курса.
+- Проверял домашние задания с детальным фидбеком, формируя привычку к лучшим практикам
+  структурирования кода, результат: успешное освоение базовых и углубленных библиотек и практик.
 
-For a site served at `https://example.com/resume/`, run the exact build command:
+### Squilla Fund — Фулстек разработчик
 
-```bash
-VITE_BASE_PATH=/resume/ yarn build
-```
+_Анализ ICO и P2P площадка криптозаймов · Краснодар · Офис · 2018 – 2020_
 
-This prefixes the generated entry files, assets, icons, favicon, and local application links with
-`/resume/`. For a root deployment, omit the variable or use `VITE_BASE_PATH=/`:
+- Спроектировал frontend-архитектуру финтех-платформы на Angular/TypeScript, стандартизировав
+  контракты с backend через Swagger/OpenAPI и codegen типов; синхронизировал схемы между фронтом и 6
+  микросервисами, обеспечив consistency и снизив время интеграции новых API.
+- Инициировал и внедрил CI/CD-пайплайны в GitLab CI (линтинг, unit-тесты, blue/green-деплой):
+  сократил время выката релиза с 60 до 8 минут (~87% ускорение).
+- Оптимизировал доставку frontend-ассетов под пиковую нагрузку (1 000 rps): настроил nginx
+  (brotli-сжатие, кэширование), обеспечил авто-деплой с простоем <10 сек, снизил медианную
+  латентность API на 40% и повысил стабильность платформы в критические торговые моменты.
+- Интегрировал и оптимизировал промо-инфраструктуру: провел рефакторинг, внедрил CDN и улучшил
+  метрики проекта, сократив время загрузки промо-страниц на 35% и обеспечив бесшовную синхронизацию
+  с основной системой.
+- Восстановил продакшн-инфраструктуру после потери владельца модуля: развернул сервисы из бэкапов,
+  перенастроил пайплайны и документировал процессы — вернул систему в строй за 4 часа, минимизировав
+  риски человеческого фактора.
 
-```bash
-yarn build
-# or
-VITE_BASE_PATH=/ yarn build
-```
+### LikiSporta — Фулстек разработчик
 
-The repository includes [`.env.example`](.env.example) with both supported examples. Environment
-values are read during the build and are not changed by `yarn preview` or by the static web server.
+_Соц. сеть стартап · Краснодар · Офис · 2017 – 2018_
 
-## Static deployment
+- Развивал фронтенд продукта на Vue.js: участвовал в полном цикле создания фич — от проектирования
+  архитектуры разделов и планирования контрактов API до релиза.
+- Влиял на продукт: анализировал пользовательские сценарии и инициировал UX-улучшения, делая
+  интерфейс соцсети более интуитивным и вовлекающим.
+- Контролировал качество: самостоятельно проводил тестирование результатов и отладку, обеспечивая
+  стабильность новых функций до их выхода на пользователей.
 
-1. Run `yarn install` in the build environment.
-2. Set `VITE_BASE_PATH` if the public URL has a subdirectory.
-3. Run `yarn build`.
-4. Publish the contents of `dist/` at the matching public URL.
+### Довлатов Центр
 
-Configure the web server to serve `index.html` for the site entry point and to preserve static files
-under the configured base prefix. A subdirectory deployment should publish `dist/` at `/resume/`,
-not at the domain root. No server-side rendering, API process, or runtime environment variables are
-required.
+_Инфобизнес · Москва · Удаленно · 2015 – 2017_
 
-## GitHub Pages deployment
+- Спроектировал и интегрировал плагины в WordPress, повысив вовлеченность подписчиков на 20%;
+  разработал функции подписок и ежедневных занятий с учетом выбранных тарифных планов, напоминание
+  об уроках.
+- Разработал высоконагруженный движок рендеринга и шаблонизации презентаций, рассчитанный на 2000
+  rps.
+- Внедрился в нестандартную legacy-архитектуру кодовой базы (самописный движок), провел анализ и
+  рефакторинг модуля планирования и запуска видеозвонков, повысив поддерживаемость и понятность
+  кода.
 
-The workflow in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds and publishes
-the site on every push to `master` and on manual runs (Actions → “Deploy to GitHub Pages” → Run
-workflow). It runs `lint`, `typecheck`, and `test` first, then builds with `VITE_BASE_PATH=/` and
-deploys `dist/` through the official Pages actions; the build output is never committed.
+## Образование
 
-Required one-time repository setup:
+- **2007 – 2012** — Инженер АТПП, Северо-Кавказский федеральный университет
 
-1. Open **Settings → Pages**.
-2. Set **Build and deployment → Source** to **GitHub Actions**.
-3. Set the custom domain there if one is used; DNS must point to GitHub Pages.
+## Ссылки
 
-`VITE_BASE_PATH: /` in the workflow assumes a domain-root URL. For a project page without a custom
-domain (`https://<user>.github.io/resume/`), change it to `/resume/` so that assets and local links
-resolve under the subdirectory.
-
-## Project structure
-
-- `src/App.tsx` — single-page composition
-- `src/components/` — layout, home sections, and UI primitives
-- `src/lib/urls.ts` — base-aware asset and local-link helpers
-- `public/` — static assets
-- `dist/` — generated production output
-
-## License
-
-This project is available under the MIT license. See [LICENSE](LICENSE) for details.
+- GitHub: <https://github.com/arswarog>
+- Хабр Карьера: <https://career.habr.com/arswarog>
+- Telegram: <https://t.me/arswarog>
